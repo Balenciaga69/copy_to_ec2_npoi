@@ -13,13 +13,14 @@ internal static class CertificateProcessor
         string templateFilePath = Path.Combine(outputDir, templateFileName);
         string filledCert1Path = Path.Combine(outputDir, "Student_A_Cert.docx");
         string filledCert2Path = Path.Combine(outputDir, "Student_B_Cert.docx");
-        string filledCert1CopyPath = Path.Combine(outputDir, "Student_Alice_Cert_Copy.docx");
 
         try
         {
             CertificateUtils.CreateCertificateTemplate(templateFilePath);
-            CertificateUtils.FillCertificate("113", "甲", "陳小明", templateFilePath, filledCert1Path);
-            CertificateUtils.FillCertificate("113", "乙", "林大華", templateFilePath, filledCert2Path);
+            CertificateUtils.FillCertificate("113", "Gucci", "謝古馳", templateFilePath, filledCert1Path);
+            CertificateUtils.FillCertificate("113", "Dior", "張迪奧", templateFilePath, filledCert2Path);
+            //var yes= CertificateUtils.CompareFilesBinary(filledCert2Path, filledCert1Path);
+            //Console.WriteLine(yes);
         }
         catch (FileNotFoundException fnfEx)
         {
