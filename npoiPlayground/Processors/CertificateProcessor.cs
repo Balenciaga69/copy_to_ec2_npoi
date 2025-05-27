@@ -25,7 +25,7 @@ internal static class CertificateProcessor
             //CertificateUtils.FillCertificate("113", "Dior", "張迪奧", templateFilePath, filledCert2Path);
             //var boo1 = CertificateUtils.CompareFilesBinary(linPath, filledCert1Path);
             var boo2 = CertificateUtils.CompareFilesBinary(filledCert2Path, filledCert1Path);
-            Console.WriteLine($"{boo1} {boo2}");
+            Console.WriteLine($" {boo2}");
         }
         catch (FileNotFoundException fnfEx)
         {
