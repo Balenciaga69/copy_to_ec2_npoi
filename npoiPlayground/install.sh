@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# 更新系統套件 (使用 yum)
+
 sudo yum update -y
 
-# 安裝必要的相依套件 (使用 yum)
+
 sudo yum install -y \
     gcc \
     glibc-devel \
@@ -15,9 +15,9 @@ sudo yum install -y \
 # 安裝 .NET SDK
 # 從 Microsoft 取得最新的 .NET 版本
 DOTNET_VERSION=8.0 # 或您需要的版本
-wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
-chmod +x dotnet-install.sh
-sudo ./dotnet-install.sh -c $DOTNET_VERSION -InstallDir /usr/share/dotnet
+sudo wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+sudo chmod +x dotnet-install.sh
+sudo ./dotnet-install.sh -c 8.0 -InstallDir /usr/share/dotnet
 
 # 設定環境變數 (為了讓 dotnet 指令可以在任何地方執行)
 echo "export DOTNET_ROOT=/usr/share/dotnet" >> ~/.bashrc
@@ -39,3 +39,16 @@ sudo yum install -y git
 # dotnet build
 
 echo "EC2 環境設置完成！"
+
+
+
+C:\Users\wits\Downloads\hap\may_pk.pem
+scp -i "may_pk.pem"
+ec2-user@ec2-44-201-205-141.compute-1.amazonaws.com:
+/home/ec2-user/copy_to_ec2_npoi/npoiPlayground/Certificates
+Student_A_Cert.docx
+
+ssh -i "may_pk.pem" ec2-user@ec2-44-201-205-141.compute-1.amazonaws.com
+
+
+scp -i "may_pk.pem" ec2-user@ec2-44-201-205-141.compute-1.amazonaws.com:/home/ec2-user/copy_to_ec2_npoi/npoiPlayground/Certificates/Student_A_Cert.docx C:\Users\wits\Downloads\hap\
