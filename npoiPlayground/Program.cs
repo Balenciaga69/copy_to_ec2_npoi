@@ -1,6 +1,3 @@
-﻿using npoiPlayground.Process;
-using npoiPlayground.Write;
+﻿using npoiPlayground.Processors;
 
-var fileName = "MyExistingDocument.docx";
-WordDocumentGenerator.GenerateStoryWithBookmarks(fileName);
-BookmarkEditTester.ExecuteTest(fileName);
+CertificateProcessor.Main(); 
