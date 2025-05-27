@@ -23,7 +23,7 @@ internal static class CertificateProcessor
             CertificateUtils.FillCertificate("113", "Gucci", "謝古馳", templateFilePath, filledCert1Path);
             CertificateUtils.FillCertificate("113", "Gucci", "謝古馳", templateFilePath, filledCert2Path);
             //CertificateUtils.FillCertificate("113", "Dior", "張迪奧", templateFilePath, filledCert2Path);
-            var boo1 = CertificateUtils.CompareFilesBinary(linPath, filledCert1Path);
+            //var boo1 = CertificateUtils.CompareFilesBinary(linPath, filledCert1Path);
             var boo2 = CertificateUtils.CompareFilesBinary(filledCert2Path, filledCert1Path);
             Console.WriteLine($"{boo1} {boo2}");
         }
