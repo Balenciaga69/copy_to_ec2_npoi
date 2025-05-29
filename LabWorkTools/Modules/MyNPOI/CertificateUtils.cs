@@ -1,7 +1,6 @@
 ﻿using NPOI.XWPF.UserModel;
 
-namespace npoiPlayground.Utils;
-
+namespace LabWorkTools.Modules.MyNPOI;
 public static class CertificateUtils
 {
     public static void CreateCertificateTemplate(string filePath)
@@ -17,7 +16,7 @@ public static class CertificateUtils
         }
     }
 
-    private static void CreateAndSetRunText(XWPFDocument doc,string text)
+    private static void CreateAndSetRunText(XWPFDocument doc, string text)
     {
         XWPFParagraph p = doc.CreateParagraph();
         XWPFRun r = p.CreateRun();
