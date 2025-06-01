@@ -17,7 +17,8 @@ internal class MyXsdProcessor
         XsdInferenceGenerator.InferXsdFromXml("sample.xml", "inferred.xsd");
         GenerateSampleXml();
 
-        Console.WriteLine("XSD 和 XML 檔案已生成完成！");
+        var isValid = XmlValidator.ValidateXmlAgainstXsd("./generated_company.xml", "./company.xsd");
+        Console.WriteLine($"isValid = {isValid}");
     }
 
     private static void CreateSampleXml()
